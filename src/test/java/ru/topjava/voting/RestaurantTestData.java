@@ -24,6 +24,7 @@ public class RestaurantTestData {
         RESTAURANT1.setDishes(Arrays.asList(DISH1, DISH2, DISH3));
         RESTAURANT2.setDishes(Arrays.asList(DISH4, DISH5));
         RESTAURANT3.setDishes(Arrays.asList(DISH6, DISH7));
+        RESTAURANT1UPDATE.setDishes(Arrays.asList(DISH1, DISH2, DISH3, DISH_NEW));
     }
 
     public static Restaurant getCreated() {
