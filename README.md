@@ -17,3 +17,60 @@ Build a voting system for deciding where to have lunch.
 Each restaurant provides a new menu each day.
 
 ---
+## Curl:
+
+
+### *Admin role for users:*
+#### Get all Users:
+ http://localhost:8080/voting/rest/admin/users -- admin@mail.ru:password
+
+#### Get User 1000:
+ http://localhost:8080/voting/rest/admin/users/1000 -- admin@mail.ru:password
+
+#### Get User by specific email (user2@mail.ru):
+ http://localhost:8080/voting/rest/admin/users/by?email=user2@mail.ru -- admin@mail.ru:password
+
+---
+
+### *User role for users:*
+#### Get profile:
+ http://localhost:8080/voting/rest/profile -- user2@mail.ru:password
+
+---
+
+### *Admin role for restaurants:*
+#### Get Restaurants:
+ http://localhost:8080/voting/rest/admin/restaurants -- admin@mail.ru:password
+
+---
+
+### *User role for restaurants:*
+#### Get all Restaurants, where you can eat today:
+ http://localhost:8080/voting/rest/restaurants -- user1@mail.ru:password
+
+#### Get all Restaurants for the random date (2023-05-01):
+ http://localhost:8080/voting/rest/restaurants?date=2023-05-01 -- user1@mail.ru:password
+
+---
+
+### *Dish with the Admin role:*
+#### Get all Dishes for the Restaurant 1005:
+ http://localhost:8080/voting/rest/admin/restaurants/1005/dishes -- admin@mail.ru:password
+
+#### Get Dish 1011 from the Restaurant 1005:
+ http://localhost:8080/voting/rest/admin/restaurants/1005/dishes/1011 -- admin@mail.ru:password
+
+---
+
+### *Voting with the Admin role:*
+#### Get all Votes for today:
+ http://localhost:8080/voting/rest/admin/users/votes/ -- admin@mail.ru:password
+
+---
+
+### *Voting with the User role:*
+#### Vote for the Restaurant 1005:
+ http://localhost:8080/voting/rest/votes -- user1@mail.ru:password
+
+#### Get Votes for today for the User:
+ http://localhost:8080/voting/rest/votes/ -- user1@mail.ru:password
